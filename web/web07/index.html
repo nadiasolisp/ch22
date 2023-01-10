@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Inicio del programa de la sesión web07");
+    </script>
+</head>
+<body>
+    <h1 class="example">Sesión WEB07</h1>
+    <p class="example" id="parrafo">Hola caryola</p>
+    <br>
+    <h3 class="example" id="demo" onclick="changeColor()">Pushame para cambiar el color.</h3> <!--evento onclick, aquí se define la función y en el .js se llama a la función, la frase cambiará a rojo}-->
+    <h2 id="color-h2" onclick="changeColorH2(this, 'green')">Hola, ya casi es viernes</h2> <!--La frase cambiará a verde-->
+    <button onclick="changeColorByClass('yellow')">Yellow</button> <!--Los elementos con esa clase cambiarán a amarillo-->
+    <br>
+    <button onclick="changeColorByClass('blue')">Blue</button> <!--Los elementos con esa clase cambiarán a azul-->
+    <script>
+        document.getElementById("parrafo").innerHTML = "Uso de la API DOM";
+    </script><!--script interno (javascript en el html)-->
+    <script src="script.js"></script> <!--script externo al html-->
+</body>
+</html>
