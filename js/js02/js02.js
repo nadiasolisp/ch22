@@ -140,10 +140,41 @@ function factorialConCicloFor(a){
 
 function factorialConRecursion(a){
     if(a < 1) return 1; //condición de paro
-    return a * factorialConRecursion(a - 1);
+    return a * factorialConRecursion(a - 1); //este sería el else, pero en este caso no es necesario ponerlo
 }
 
 console.log("Factorial 3= " + factorialConCicloFor(3)); //6
 console.log("Factorial 5= " + factorialConCicloFor(5)); //120
 console.log("Factorial 3= " + factorialConRecursion(3)); //6
 console.log("Factorial 5= " + factorialConRecursion(5)); //120
+
+/*Hacer una recursión que muestre en consola un saludo en consola como:
+Saludo 1
+Saludo 2
+Saludo 3....saludo 10
+
+Saludo(10)
+*/
+
+function saludoConRecursion (a, b = 1){
+    
+    console.log('saludo ' + b);
+        if(a === b){
+            return;
+        }else{
+            saludoConRecursion( a , b+1);
+        }
+}
+
+console.log("Saludo " + saludoConRecursion(10));
+
+
+//otra forma, la de serge tal cual
+function saludo( cantidad, iteracion=1 ){
+    console.log("saludo" + iteracion);
+    if( iteracion >= cantidad) 
+        return 1;
+    return saludo( cantidad, iteracion+1 );
+}
+saludo(10);
+
